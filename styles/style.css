@@ -336,3 +336,93 @@ h2 span{
     transform: scale(1.1);
 }
 
+.download {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.download_text {
+    max-width: 630px;
+}
+
+.download h2 {
+    text-align: left;
+    font-size: 60px;
+    line-height: 125%;
+}
+
+.download h2 span {
+    color: #B0907A;
+    font-style: italic;
+}
+
+.download_text p {
+    max-width: 600px;
+    margin: 40px 0;
+    color: #403F3D;
+    line-height: 150%;
+}
+
+.download_buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.download_button {
+    width: 200px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    transition: .2s;
+}
+
+.download_button:nth-child(1) img {
+    width: 25px;
+    height: 28px;
+}
+
+.download_button img {
+    width: 28px;
+    height: 28px;
+}
+
+.download_button span {
+    display: flex;
+    flex-direction: column;
+    color: #403F3D;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.download_button small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.download_button:hover {
+    background: #665F55;
+}
+
+.download_button:hover span {
+    color: #E1D4C9;
+}
+
+.download_button:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.download_image {
+    width: 630px;
+}
+
+.download_image img {
+    width: 100%;
+    display: block;
+}
