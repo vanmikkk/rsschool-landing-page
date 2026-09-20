@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    max-width: 1400px;
+    max-width: 1360px;
     margin: 0 auto;
 }
 
@@ -35,6 +35,17 @@ a{
     color: #403F3D;
     font-weight: 600;
     text-decoration: none;
+}
+
+.menu_cup{
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid transparent;
+    transition: .1s;
+}
+
+.menu_cup:hover{
+    border-bottom: 2px solid #403F3D;
 }
 
 .settings{
@@ -69,6 +80,27 @@ a{
     transition: 0.25s ease-in-out;
 }
 
+.hover_circle {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 2px;
+    left: 45px;
+    border-radius: 50%;
+    background: #665F55;
+    opacity: 0;
+
+    transition: 0.25s ease-in-out;
+}
+
+.theme:hover .hover_circle{
+    opacity: 1;
+}
+
+.theme:hover .icons .icon:nth-child(2) img{
+    filter: brightness(0) saturate(100%) invert(84%) sepia(8%) saturate(350%) hue-rotate(345deg) brightness(94%) contrast(88%);
+}
+
 .icons {
     position: relative;
     z-index: 1;
@@ -88,6 +120,7 @@ a{
     justify-content: center;
 }
 
+
 .icons img {
     width: 22px;
     height: 22px;
@@ -101,3 +134,205 @@ a{
 .icon:nth-child(2) img{
     margin-right: 1px;
 }
+
+main{
+    margin-top: 20px;
+}
+
+.intro{
+    background: url("../images/img-hero.jpg");
+    padding: 100px;
+    border-radius: 40px;
+
+}
+
+h1{
+    font-size: 72px;
+    font-weight: 600;
+    color: #E1D4C9;
+    width: 530px;
+}
+
+.intro p{
+    width: 530px;
+    margin: 40px 0;
+    color: #E1D4C9;
+}
+
+.intro a {
+    width: 190px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: #E1D4C9;
+    border-radius: 100px;
+    transition: gap .2s ease;
+}
+
+.intro a .icon {
+    display: flex;
+    align-items: center;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        max-width .2s ease,
+        opacity .2s ease;
+}
+
+.intro a .icon img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.intro a:hover {
+    gap: 8px;
+}
+
+.intro a:hover .icon {
+    max-width: 16px;
+    opacity: 1;
+}
+
+h1 span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.favourite_coffee{
+    margin-top: 100px;
+}
+
+h2{
+    font-size: 60px;
+    color: #403F3D;
+    text-align: center;
+}
+
+h2 span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.swap_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coffee{
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.coffee h3{
+    color: #403F3D;
+    text-align: center;
+    font-weight: 600;
+}
+
+.coffee p{
+    color: #403F3D;
+    text-align: center;
+    font-size: 16px;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.slide_indicator{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.indicator{
+    width: 40px;
+    height: 4px;
+    border-radius: 3px;
+    background: #C1B6AD;
+}
+
+.indicator.active{
+    background: #665F55;
+}
+
+.swap_prewious{
+    transform: rotate(180deg);
+}
+
+.swap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: #665F55 1px solid;
+    height: 60px;
+    width: 60px;
+}
+
+.collage{
+    margin-top: 100px;
+}
+
+.collage h2{
+    text-align: left;
+    line-height: 125%;
+}
+
+.collage_images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.collage_images_part{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.collage_images_part:nth-child(1) .collage_image{
+    width: 660px;
+    height: 590px;
+}
+
+.collage_images_part:nth-child(1) .collage_image:nth-child(2){
+    height: 430px;
+}
+
+.collage_images_part:nth-child(2) .collage_image{
+    width: 660px;
+    height: 590px;
+}
+
+.collage_images_part:nth-child(2) .collage_image:nth-child(1){
+    height: 430px;
+}
+
+.collage_image{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.collage_image:hover img{
+    transform: scale(1);
+}
+
+.collage_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .1s ease;
+    transform: scale(1.1);
+}
+
