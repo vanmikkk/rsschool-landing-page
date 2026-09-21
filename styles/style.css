@@ -7,6 +7,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background: #E1D4C9;
 }
@@ -580,6 +584,21 @@ footer {
     margin-top: 40px;
 }
 
+.show_more{
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-bottom: #B0907A 1px solid;
+    border-right: #B0907A 1px solid;
+    transform: rotate(45deg);
+}
+
+.show_more_flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .category {
     height: 46px;
     display: flex;
@@ -1089,7 +1108,7 @@ body.dark .menu_price {
     }
 
     .footer_left h2 {
-        font-size: 60x;
+        font-size: 60px;
         line-height: 125%;
     }
 
@@ -1133,6 +1152,10 @@ body.dark .menu_price {
        display: none;
     }
 
+    .show_more{
+        display: block;
+    }
+
     .menu_card_image {
         height: 310px;
     }
@@ -1159,6 +1182,15 @@ body.dark .menu_price {
         grid-template-columns: 1fr;
         gap: 20px;
         margin-top: 32px;
+    }
+
+    .favourite_coffee h2,
+    .collage h2,
+    .download h2,
+    .footer_left h2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
     }
 }
 
@@ -1191,15 +1223,6 @@ body.dark .menu_price {
         font-size: 42px;
         font-weight: 600;
         line-height: 115%;
-    }
-
-    .favourite_coffee h2,
-    .collage h2,
-    .download h2,
-    .footer_left h2 {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 125%;
     }
 
     .intro {
@@ -1286,6 +1309,11 @@ body.dark .menu_price {
 
     .download_text {
         max-width: none;
+        width: 100%
+    }
+
+    .download_text h2{
+        width: 100%;
     }
 
     .download_text p {
@@ -1349,6 +1377,10 @@ body.dark .menu_price {
         width: auto;
         font-size: 32px;
         line-height: 115%;
+    }
+
+    .menu h2{
+        font-size: 24px;
     }
 
     .menu_categories {
