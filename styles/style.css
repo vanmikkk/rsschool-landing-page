@@ -1194,8 +1194,7 @@ body.dark .menu_price {
     }
 }
 
-
-@media (max-width: 380px) {
+@media (max-width: 460px){
     .container {
         width: calc(100% - 32px);
     }
@@ -1241,35 +1240,8 @@ body.dark .menu_price {
         margin-top: 60px;
     }
 
-    .swap{
-        display: none;
-    }
-
-    .swap_block {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .coffee .img img {
-        width: 100%;
-    }
-
-    .coffee h3 {
-        font-size: 24px;
-    }
-
-    .coffee p {
-        font-size: 16px;
-        line-height: 150%;
-    }
-
     .price {
         font-size: 24px !important;
-    }
-
-    .swap {
-        width: 32px;
-        height: 32px;
     }
 
     .collage {
@@ -1407,4 +1379,25 @@ body.dark .menu_price {
         height: 310px;
     }
 
+    .swap{
+        display: none;
+    }
+
+    .swap_block {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .coffee .img img {
+        width: 100%;
+    }
+
+    .coffee h3 {
+        font-size: 24px;
+    }
+
+    .coffee p {
+        font-size: 16px;
+        line-height: 150%;
+    }
 }
