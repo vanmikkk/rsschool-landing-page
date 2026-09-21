@@ -1,13 +1,19 @@
 let themeButton = document.querySelector("#theme");
-let themeSircle = document.querySelector(".theme_circle");
-let body = document.querySelector("body");
+let themeCircle = document.querySelector(".theme_circle");
+let logo = document.querySelector(".logo img");
 
-themeButton.addEventListener('click', () => {
-     if(themeSircle.style.left == "45px"){
-        themeSircle.style.left = 2 + "px"
-        body.style.backgroundColor = "#E1D4C9"
-    } else {
-        themeSircle.style.left = 45 + "px"
-        body.style.backgroundColor = "#292826"
-    }
-})
+if (themeButton) {
+    themeButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            if (logo) {
+                logo.src = "./images/logo-dark.png";
+            }
+        } else {
+            if (logo) {
+                logo.src = "./images/logo.png";
+            }
+        }
+    });
+}
