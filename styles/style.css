@@ -396,6 +396,7 @@ h2 span{
 
 .download_buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -564,7 +565,8 @@ footer {
 }
 
 .menu h1 {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     color: #403F3D;
     text-align: center;
@@ -597,6 +599,11 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.show_more_flex button{
+    border: none;
+    background: transparent;
 }
 
 .category {
@@ -1296,6 +1303,7 @@ body.dark .menu_price {
 
     .download_buttons {
         flex-direction: column;
+        align-items: center;
         gap: 12px;
     }
 
