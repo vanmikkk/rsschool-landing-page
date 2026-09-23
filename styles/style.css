@@ -587,17 +587,16 @@ footer {
 }
 
 .show_more{
-    display: none;
-    width: 20px;
-    height: 20px;
-    border-bottom: #B0907A 1px solid;
-    border-right: #B0907A 1px solid;
-    transform: rotate(45deg);
+    color: #403F3D;
+}
+
+body.dark .show_more{
+    color: #E1D4C9;
 }
 
 .show_more_flex{
+    display: none;
     width: 100%;
-    display: flex;
     justify-content: center;
 }
 
@@ -1198,6 +1197,18 @@ body.dark .menu_price {
         font-size: 32px;
         font-weight: 600;
         line-height: 125%;
+    }
+
+    .show_more_flex{
+        display: flex;
+    }
+
+    .show_more{
+        transition: .1s;
+    }
+
+    .show_more:hover{
+        transform: scale(1.1);
     }
 }
 
