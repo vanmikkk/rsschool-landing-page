@@ -243,6 +243,11 @@ h2 span{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.coffee.fade {
+    opacity: 0;
 }
 
 .coffee h3{
@@ -716,6 +721,10 @@ body.dark .show_more{
     display: none;
 }
 
+.burger_menu{
+    display: none;
+}
+
 .close_btn{
     position: relative;
     margin-top: 30px;
@@ -1003,6 +1012,10 @@ body.dark .menu_price {
 }
 
 @media (max-width: 768px) {
+    .burger_menu{
+        display: block;
+    }
+
     .container {
         width: calc(100% - 80px);
     }
