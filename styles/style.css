@@ -716,6 +716,55 @@ body.dark .show_more{
     display: none;
 }
 
+.close_btn{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0 30px;
+}
+
+.close_btn img{
+    width: 20px;
+}
+
+
+.burger_menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #E1D4C9;
+    z-index: 100;
+    width: 100%;
+    transform: translateX(100%);
+    transition: .4s ease-in;
+}
+
+.burger_links{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.burger_links a{
+    border-bottom: 2px solid transparent;
+    transition: .2s;
+}
+
+.burger_links a:hover{
+    border-bottom: 2px solid #403F3D;
+}
+
+.burger_menu.active{
+    transform: translateX(0%);
+}
+
 /* dark theme*/
 
 body.dark {

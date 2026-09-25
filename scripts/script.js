@@ -1,6 +1,10 @@
 let themeButton = document.querySelector("#theme");
 let themeCircle = document.querySelector(".theme_circle");
 let logo = document.querySelector(".logo img");
+let burger = document.querySelector(".burger");
+let closeBtn = document.querySelector(".close_btn img");
+let burgerMenu = document.querySelector(".burger_menu");
+let burderLinks = document.querySelectorAll(".burger_links a")
 
 document.addEventListener("DOMContentLoaded", () => {
     if(localStorage.getItem("theme") == "dark"){
@@ -26,3 +30,17 @@ if (themeButton) {
         }
     });
 }
+
+burger.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active')
+})
+
+closeBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active')
+})
+
+burderLinks.forEach(el => {
+    el.addEventListener('click', () => {
+        burgerMenu.classList.remove('active')
+    })
+})
