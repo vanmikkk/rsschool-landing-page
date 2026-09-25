@@ -729,6 +729,13 @@ body.dark .show_more{
     width: 20px;
 }
 
+body.dark .burger_menu{
+    background: #292826;
+}
+
+body.dark .close_btn img{
+    filter: brightness(0) invert(1);;
+}
 
 .burger_menu{
     position: fixed;
