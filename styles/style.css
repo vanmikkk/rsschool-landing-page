@@ -599,6 +599,10 @@ body.dark .show_more{
     color: #E1D4C9;
 }
 
+.coffee .img img {
+    max-width: 480px;
+}
+
 .show_more_flex{
     display: none;
     width: 100%;
@@ -1227,6 +1231,10 @@ body.dark .menu_price {
        display: none;
     }
 
+    .menu_card:nth-child(5).show, .menu_card:nth-child(6).show, .menu_card:nth-child(7).show, .menu_card:nth-child(8).show {
+       display: block;
+    }
+
     .show_more{
         display: block;
     }
@@ -1250,6 +1258,11 @@ body.dark .menu_price {
     .menu_price {
         font-size: 24px;
     }
+
+    .show_more_flex{
+        margin-top: 20px;
+        display: flex;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1266,10 +1279,6 @@ body.dark .menu_price {
         font-size: 32px;
         font-weight: 600;
         line-height: 125%;
-    }
-
-    .show_more_flex{
-        display: flex;
     }
 
     .show_more{
