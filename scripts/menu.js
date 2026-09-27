@@ -142,7 +142,6 @@ function openModal(name){
 
             modalName.innerHTML = product.name
             modalDesc.innerHTML = product.description
-
             sizeS.innerHTML = product.sizes.s.size
             sizeM.innerHTML = product.sizes.m.size
             sizeL.innerHTML = product.sizes.l.size
