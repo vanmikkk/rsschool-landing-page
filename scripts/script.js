@@ -33,10 +33,12 @@ if (themeButton) {
 
 burger.addEventListener('click', () => {
     burgerMenu.classList.toggle('active')
+    document.body.style.overflowY = "hidden"
 })
 
 closeBtn.addEventListener('click', () => {
     burgerMenu.classList.toggle('active')
+    document.body.style.overflowY = "auto"
 })
 
 burderLinks.forEach(el => {
