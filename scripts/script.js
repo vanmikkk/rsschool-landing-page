@@ -41,6 +41,13 @@ closeBtn.addEventListener('click', () => {
     document.body.style.overflowY = "auto"
 })
 
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && document.body.style.overflowY == "hidden") {
+    burgerMenu.classList.toggle('active')
+    document.body.style.overflowY = "auto"
+  }
+});
+
 burderLinks.forEach(el => {
     el.addEventListener('click', () => {
         burgerMenu.classList.remove('active')
