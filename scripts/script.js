@@ -31,6 +31,15 @@ if (themeButton) {
     });
 }
 
+let burgerLinks = document.querySelectorAll('.burger_links a')
+
+burgerLinks.forEach(lick => {
+    lick.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active')
+        document.body.style.overflowY = "auto"
+    })
+})
+
 burger.addEventListener('click', () => {
     burgerMenu.classList.toggle('active')
     document.body.style.overflowY = "hidden"
