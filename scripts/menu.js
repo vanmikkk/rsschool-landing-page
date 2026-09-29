@@ -1,9 +1,12 @@
 // меню с товарами
 
+
+let showMore = document.querySelector('.show_more')
+
 fetchMenuCards("coffee")
 
 function fetchMenuCards(name){
-    fetch('./products.json')
+    fetch('../products.json')
         .then(response => response.json())
         .then(products => {
             const menuCards = document.querySelector('.menu_cards');
@@ -40,8 +43,14 @@ function fetchMenuCards(name){
                     menuCards.appendChild(card);
                     index++;
                 }
-
             })
+            if(index <= 4){
+                showMore.classList.add('hide_show_more')
+                console.log(index)
+            } else {
+                showMore.classList.remove('hide_show_more')
+                console.log(index)
+            }
         })
 }
 
@@ -53,6 +62,7 @@ coffee.addEventListener('click', () => {
     coffee.classList.add('active')
     tea.classList.remove('active')
     dessert.classList.remove('active')
+    showMore.innerHTML = "Показать еще"
     fetchMenuCards("coffee")
 })
 
@@ -60,6 +70,7 @@ tea.addEventListener('click', () => {
     tea.classList.add('active')
     coffee.classList.remove('active')
     dessert.classList.remove('active')
+    showMore.innerHTML = "Показать еще"
     fetchMenuCards("tea")
 })
 
@@ -67,12 +78,12 @@ dessert.addEventListener('click', () => {
     dessert.classList.add('active')
     tea.classList.remove('active')
     coffee.classList.remove('active')
+    showMore.innerHTML = "Показать еще"
     fetchMenuCards("dessert")
 })
 
 // показать еще
 
-let showMore = document.querySelector('.show_more')
 showMore.addEventListener('click', () => {
     if(showMore.innerHTML == "Скрыть"){
         let menuCards = document.querySelectorAll('.menu_card')
@@ -132,7 +143,7 @@ function openModal(name){
     document.body.style.overflowY = "hidden"
     modalWindow.style.display = "flex"
 
-    fetch('./products.json')
+    fetch('../products.json')
         .then(response => response.json())
         .then(products => {
 

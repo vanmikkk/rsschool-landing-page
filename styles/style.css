@@ -723,6 +723,7 @@ body.dark .show_more{
 
 .burger {
     display: none;
+    transition: .2s;
 }
 
 .burger_menu{
@@ -752,7 +753,7 @@ body.dark .close_btn img{
 
 .burger_menu{
     position: fixed;
-    top: 0;
+    top: 100px;
     right: 0;
     height: 100vh;
     background: #E1D4C9;
@@ -770,6 +771,22 @@ body.dark .close_btn img{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.burger span{
+    transition: .2s;
+}
+
+.burger span:nth-child(1).active {
+    transform: rotate(45deg);
+}
+
+.burger span:nth-child(2).active {
+    transform: rotate(-45deg);
+}
+
+.burger.active{
+    gap: 0;
 }
 
 .burger_links a{
@@ -798,6 +815,10 @@ body.dark .close_btn img{
     padding: 20px;
     background: rgba(64, 63, 61, .8);
     z-index: 100;
+}
+
+.hide_show_more{
+    display: none !important;
 }
 
 .modal{

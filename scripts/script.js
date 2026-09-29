@@ -2,7 +2,6 @@ let themeButton = document.querySelector("#theme");
 let themeCircle = document.querySelector(".theme_circle");
 let logo = document.querySelector(".logo img");
 let burger = document.querySelector(".burger");
-let closeBtn = document.querySelector(".close_btn img");
 let burgerMenu = document.querySelector(".burger_menu");
 let burderLinks = document.querySelectorAll(".burger_links a")
 
@@ -40,19 +39,26 @@ burgerLinks.forEach(lick => {
     })
 })
 
+let spans = document.querySelectorAll(".burger span")
+
 burger.addEventListener('click', () => {
+    if(burgerMenu.classList.contains('active')){
+        document.body.style.overflowY = "auto"
+    } else {
+        document.body.style.overflowY = "hidden"
+    }
     burgerMenu.classList.toggle('active')
-    document.body.style.overflowY = "hidden"
+    spans.forEach(span => {
+        span.classList.toggle('active')
+    })
+    burger.classList.toggle('active')
+    
 })
 
-closeBtn.addEventListener('click', () => {
-    burgerMenu.classList.toggle('active')
-    document.body.style.overflowY = "auto"
-})
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && document.body.style.overflowY == "hidden") {
-    burgerMenu.classList.toggle('active')
+    burgerMenu.classList.remove('active')
     document.body.style.overflowY = "auto"
   }
 });
