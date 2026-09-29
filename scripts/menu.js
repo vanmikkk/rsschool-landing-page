@@ -3,7 +3,7 @@
 fetchMenuCards("coffee")
 
 function fetchMenuCards(name){
-    fetch('./products.json')
+    fetch('./rsschool-landing-page/products.json')
         .then(response => response.json())
         .then(products => {
             const menuCards = document.querySelector('.menu_cards');
