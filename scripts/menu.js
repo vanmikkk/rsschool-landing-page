@@ -6,7 +6,7 @@ let showMore = document.querySelector('.show_more')
 fetchMenuCards("coffee")
 
 function fetchMenuCards(name){
-    fetch('../products.json')
+    fetch('./products.json')
         .then(response => response.json())
         .then(products => {
             const menuCards = document.querySelector('.menu_cards');
@@ -143,7 +143,7 @@ function openModal(name){
     document.body.style.overflowY = "hidden"
     modalWindow.style.display = "flex"
 
-    fetch('../products.json')
+    fetch('./products.json')
         .then(response => response.json())
         .then(products => {
 
