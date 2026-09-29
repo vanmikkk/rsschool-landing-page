@@ -132,7 +132,7 @@ function openModal(name){
     document.body.style.overflowY = "hidden"
     modalWindow.style.display = "flex"
 
-    fetch('../products.json')
+    fetch('./products.json')
         .then(response => response.json())
         .then(products => {
 
