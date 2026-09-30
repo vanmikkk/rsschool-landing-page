@@ -2,7 +2,6 @@ let themeButton = document.querySelector("#theme");
 let themeCircle = document.querySelector(".theme_circle");
 let logo = document.querySelector(".logo img");
 let burger = document.querySelector(".burger");
-let closeBtn = document.querySelector(".close_btn img");
 let burgerMenu = document.querySelector(".burger_menu");
 let burderLinks = document.querySelectorAll(".burger_links a")
 
@@ -31,16 +30,55 @@ if (themeButton) {
     });
 }
 
-burger.addEventListener('click', () => {
-    burgerMenu.classList.toggle('active')
+let burgerLinks = document.querySelectorAll('.burger_links a')
+
+burgerLinks.forEach(lick => {
+    lick.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active')
+        document.body.style.overflowY = "auto"
+    })
 })
 
-closeBtn.addEventListener('click', () => {
+let spans = document.querySelectorAll(".burger span")
+
+burger.addEventListener('click', () => {
+    if(burgerMenu.classList.contains('active')){
+        document.body.style.overflowY = "auto"
+    } else {
+        document.body.style.overflowY = "hidden"
+    }
     burgerMenu.classList.toggle('active')
+    spans.forEach(span => {
+        span.classList.toggle('active')
+    })
+    burger.classList.toggle('active')
+    
 })
+
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && document.body.style.overflowY == "hidden") {
+    burgerMenu.classList.remove('active')
+    document.body.style.overflowY = "auto"
+    spans.forEach(span => {
+        span.classList.remove('active')
+    })
+    burger.classList.remove('active')
+  }
+});
 
 burderLinks.forEach(el => {
     el.addEventListener('click', () => {
         burgerMenu.classList.remove('active')
     })
 })
+
+window.addEventListener('resize', () => {
+    const windowWidth = window.innerWidth;
+    console.log(windowWidth)
+    if(burgerMenu.classList.contains('active') && windowWidth > 769){
+        document.body.style.overflowY = "auto"
+    } else if(burgerMenu.classList.contains('active') && windowWidth < 769){
+        document.body.style.overflowY = "hidden"
+    }
+});
