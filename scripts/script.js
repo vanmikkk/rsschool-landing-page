@@ -60,6 +60,10 @@ window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && document.body.style.overflowY == "hidden") {
     burgerMenu.classList.remove('active')
     document.body.style.overflowY = "auto"
+    spans.forEach(span => {
+        span.classList.remove('active')
+    })
+    burger.classList.remove('active')
   }
 });
 
@@ -68,3 +72,13 @@ burderLinks.forEach(el => {
         burgerMenu.classList.remove('active')
     })
 })
+
+window.addEventListener('resize', () => {
+    const windowWidth = window.innerWidth;
+    console.log(windowWidth)
+    if(burgerMenu.classList.contains('active') && windowWidth > 769){
+        document.body.style.overflowY = "auto"
+    } else if(burgerMenu.classList.contains('active') && windowWidth < 769){
+        document.body.style.overflowY = "hidden"
+    }
+});

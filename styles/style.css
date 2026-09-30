@@ -593,6 +593,7 @@ footer {
 
 .show_more{
     color: #403F3D;
+    cursor: pointer;
 }
 
 body.dark .show_more{
